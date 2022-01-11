@@ -33,6 +33,16 @@ return sentence1 + sentence2;
 
 alert(concatSentences(sentencePrompt, reversedSentence));
 //count number of letters in original sentence, divide by two, and output letter at result's index then concat at beginning
-
-
+function halfFirst(sentence, sentence2){
+  let indexCode = (sentence.length / 2);
+  let firstLetter = sentence.charAt(indexCode);
+  return firstLetter + sentence + sentence2;
+}
+let newSentence = halfFirst(sentencePrompt, reversedSentence);
 //Bonus - reverse return from fourth function
+
+function reverseFinal(sentence){
+  return sentence.split("").reverse().join("");
+}
+
+alert(reverseFinal(newSentence));
